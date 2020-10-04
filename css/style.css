@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   font-family: sans-serif;
 }
@@ -16,6 +17,9 @@ header {
 
 main {
   min-height: 100vh;
+  /* max-width: 104rem; */
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 
 footer {
@@ -24,7 +28,6 @@ footer {
 
 h1 {
   color: white;
-  text-align: center;
 }
 
 .col2Flex {
@@ -35,6 +38,65 @@ h1 {
 .col2Flex > div {
   width: 50%;
   padding: 0 1rem;
+  position: relative;
+}
+
+#sec1 {
+  margin-bottom: 10rem;
+}
+
+.canvas {
+  box-shadow: 0px 0px 24px 10px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+main section {
+  margin-bottom: 3.2rem;
+}
+
+.austronautContainer {
+  position: relative;
+}
+
+.austronaut {
+  position: absolute;
+  transform: rotate(-10deg);
+  right: 12rem;
+  bottom: 4rem;
+
+  width: 14rem;
+  height: 14rem;
+}
+
+#sec2 {
+  margin-bottom: 16rem;
+}
+
+.planets {
+  position: relative;
+}
+
+.planet1 {
+  position: absolute;
+  background-color: hotpink;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+
+  top: -10rem;
+  right: 12rem;
+
+  z-index: -2;
+}
+
+.planet2 {
+  background-color: orangered;
+  width: 18rem;
+  height: 18rem;
+  position: absolute;
+  border-radius: 50%;
+  left: 16rem;
+  top: 20rem;
 }
 
 /* Tablet */
@@ -43,4 +105,126 @@ h1 {
 
 /* Desktop */
 @media screen and (min-width: 64rem) {
+}
+
+/* Layout grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5rem;
+  /* margin: 0 0.75rem; */
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.grid--inner {
+  margin: 0;
+}
+
+.width-1\/12 {
+  grid-column: 1 / 13;
+}
+
+.width-2\/12 {
+  grid-column: span 2;
+}
+
+.width-6\/12 {
+  grid-column: span 4;
+}
+
+/* // More of the same... */
+
+.width-12\/12 {
+  grid-column: span 12;
+}
+
+.width-4\/9 {
+  grid-column: 1 / 5;
+}
+
+.width-2\/4-small {
+  grid-column: 2 / 4;
+}
+
+.span-4 {
+  grid-column: span 4;
+}
+
+.width-3\/10 {
+  grid-column: span 4;
+}
+
+.width-5\/9 {
+  grid-column: span 4;
+}
+
+.width-7\/12 {
+  grid-column: span 4;
+}
+
+/* Tablet */
+@media screen and (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .width-4\/9 {
+    grid-column: 3 / 7;
+  }
+
+  .width-3\/10 {
+    grid-column: 1 / 9;
+  }
+
+  .width-7\/12 {
+    grid-column: 5 / 9;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 64rem) {
+  .grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .width-2\/7 {
+    grid-column: 2 / 8;
+  }
+
+  .width-6\/12 {
+    grid-column: span 6;
+  }
+
+  .width-4\/9 {
+    grid-column: 3 / 10;
+  }
+
+  .width-5\/9 {
+    grid-column: 4 / 10;
+  }
+
+  .width-3\/5 {
+    grid-column: 2 / 6;
+  }
+
+  .width-3\/6 {
+    grid-column: 2 / 7;
+  }
+
+  .width-6\/11 {
+    grid-column: 6 / 12;
+  }
+
+  .width-7\/11 {
+    grid-column: 7 / 12;
+  }
+
+  .width-3\/10 {
+    grid-column: 3 / 11;
+  }
+
+  .width-7\/12 {
+    grid-column: 7 / 13;
+  }
 }

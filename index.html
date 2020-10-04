@@ -2,28 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <title>Dataviz, de toekomst</title>
     <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>Dataviz and Space</h1>
+    <header class="grid">
+      <h1 class="title width-2/7">
+        Hoe zien data vizualizatie studenten de toekomst
+      </h1>
     </header>
 
     <main>
-      <section id"" class="col2Flex">
-        <div></div>
-        <div>
-          <canvas id="Chart1" width="640" height="320"></canvas>
+      <section id="sec1" class="grid">
+        <div class="austronautContainer width-3/5">
+          <img
+            data-paralaxspeed="0.2"
+            class="paralax austronaut"
+            src="img/austronaut.svg"
+            alt="austronaut"
+          />
+        </div>
+        <div class="width-6/11">
+          <canvas class="canvas" id="pieChart1" height="180"></canvas>
         </div>
       </section>
-      <section id"" class="col2Flex">
-        <div>
-          <canvas id="Chart2" width="640" height="320"></canvas>
+
+      <section id="sec2" class="">
+        <div class="grid grid--inner">
+          <div class="width-5/9">
+            <canvas class="canvas" id="barChart1" height="220"></canvas>
+          </div>
         </div>
+        <div class="planets">
+          <div data-paralaxspeed="0.25" class="paralax planet1"></div>
+          <div data-paralaxspeed="0.2" class="paralax planet2"></div>
+        </div>
+      </section>
+
+      <section id="sec3" class="col2Flex">
         <div></div>
+        <div>
+          <canvas
+            class="canvas"
+            id="bubbleChart1"
+            width="640"
+            height="320"
+          ></canvas>
+        </div>
       </section>
     </main>
 

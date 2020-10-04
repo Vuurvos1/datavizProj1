@@ -1,5 +1,18 @@
-const ctx1 = document.getElementById('Chart1').getContext('2d');
-const myChart1 = new Chart(ctx1, {
+// paralax code
+const paralaxArr = document.querySelectorAll('.paralax');
+
+window.addEventListener('scroll', () => {
+  for (let i = 0; i < paralaxArr.length; i++) {
+    const paralaxSpeed = paralaxArr[i].dataset.paralaxspeed;
+    const posY = window.pageYOffset * paralaxSpeed;
+
+    paralaxArr[i].style.transform = `translateY(${posY}px)`;
+  }
+});
+
+const textCol = '#';
+
+new Chart(document.querySelector('#pieChart1').getContext('2d'), {
   type: 'doughnut',
   data: {
     labels: [
@@ -46,8 +59,7 @@ const myChart1 = new Chart(ctx1, {
   },
 });
 
-const ctx2 = document.getElementById('Chart2').getContext('2d');
-const myBarChart = new Chart(ctx2, {
+new Chart(document.querySelector('#barChart1').getContext('2d'), {
   type: 'bar',
   data: {
     labels: [
@@ -81,3 +93,167 @@ const myBarChart = new Chart(ctx2, {
     },
   },
 });
+
+new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
+  type: 'bubble',
+  data: {
+    labels: 'Africa',
+    datasets: [
+      {
+        label: ['China'],
+        backgroundColor: 'rgba(255,221,50,0.2)',
+        borderColor: 'rgba(255,221,50,1)',
+        data: [
+          {
+            x: 21269017,
+            y: 5.245,
+            r: 15,
+          },
+        ],
+      },
+      {
+        label: ['Denmark'],
+        backgroundColor: 'rgba(60,186,159,0.2)',
+        borderColor: 'rgba(60,186,159,1)',
+        data: [
+          {
+            x: 258702,
+            y: 7.526,
+            r: 10,
+          },
+        ],
+      },
+      {
+        label: ['Germany'],
+        backgroundColor: 'rgba(0,0,0,0.2)',
+        borderColor: '#000',
+        data: [
+          {
+            x: 3979083,
+            y: 6.994,
+            r: 15,
+          },
+        ],
+      },
+      {
+        label: ['Japan'],
+        backgroundColor: 'rgba(193,46,12,0.2)',
+        borderColor: 'rgba(193,46,12,1)',
+        data: [
+          {
+            x: 4931877,
+            y: 5.921,
+            r: 15,
+          },
+        ],
+      },
+    ],
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Predicted world population (millions) in 2050',
+    },
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'Happiness',
+          },
+        },
+      ],
+      xAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'GDP (PPP)',
+          },
+        },
+      ],
+    },
+  },
+});
+
+/*
+new Chart(document.getElementById('bubbleChart1'), {
+  type: 'bubble',
+  data: {
+    labels: 'Africa',
+    datasets: [
+      {
+        label: ['China'],
+        backgroundColor: 'rgba(255,221,50,0.2)',
+        borderColor: 'rgba(255,221,50,1)',
+        data: [
+          {
+            x: 21269017,
+            y: 5.245,
+            r: 15,
+          },
+        ],
+      },
+      {
+        label: ['Denmark'],
+        backgroundColor: 'rgba(60,186,159,0.2)',
+        borderColor: 'rgba(60,186,159,1)',
+        data: [
+          {
+            x: 258702,
+            y: 7.526,
+            r: 10,
+          },
+        ],
+      },
+      {
+        label: ['Germany'],
+        backgroundColor: 'rgba(0,0,0,0.2)',
+        borderColor: '#000',
+        data: [
+          {
+            x: 3979083,
+            y: 6.994,
+            r: 15,
+          },
+        ],
+      },
+      {
+        label: ['Japan'],
+        backgroundColor: 'rgba(193,46,12,0.2)',
+        borderColor: 'rgba(193,46,12,1)',
+        data: [
+          {
+            x: 4931877,
+            y: 5.921,
+            r: 15,
+          },
+        ],
+      },
+    ],
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Predicted world population (millions) in 2050',
+    },
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'Happiness',
+          },
+        },
+      ],
+      xAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'GDP (PPP)',
+          },
+        },
+      ],
+    },
+  },
+});
+*/
