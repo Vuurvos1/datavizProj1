@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <title>Dataviz, de toekomst</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/grid.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   </head>
   <body>
     <header class="grid">
-      <h1 class="title width-2/7">
+      <h1 class="title width-3/7">
         Hoe zien data vizualizatie studenten de toekomst
       </h1>
     </header>
@@ -25,7 +26,7 @@
           />
         </div>
         <div class="width-6/11">
-          <h3></h3>
+          <h3>Hoeveel studenten geloven in buitenaarts leven?</h3>
           <canvas class="canvas" id="pieChart1" height="180"></canvas>
         </div>
       </section>
@@ -33,7 +34,7 @@
       <section id="sec2" class="">
         <div class="grid grid--inner">
           <div class="width-5/9">
-            <h3></h3>
+            <h3>Intorvert deel van buitenaars leven</h3>
             <canvas class="canvas" id="barChart1" height="220"></canvas>
           </div>
         </div>
@@ -44,18 +45,16 @@
       </section>
 
       <section class="transition">
-        <img src="img/landscape1.svg" alt="" />
+        <!-- <img src="img/landscape1.svg" alt="" /> -->
 
         <section id="sec3" class="grid">
           <div></div>
-          <div class="width-5/9">
-            <h3></h3>
-            <canvas
-              class="canvas"
-              id="bubbleChart1"
-              width="640"
-              height="320"
-            ></canvas>
+          <div class="width-6/10">
+            <h3>
+              Hoe gelukkig zijn studenten in vergelijking met hoeveel ze willen
+              verdienen?
+            </h3>
+            <canvas class="canvas" id="bubbleChart1" height="220"></canvas>
           </div>
         </section>
       </section>

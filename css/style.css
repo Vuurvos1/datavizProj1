@@ -31,6 +31,11 @@ h1 {
   color: white;
 }
 
+h3 {
+  color: white;
+  margin-bottom: 0.8em;
+}
+
 .col2Flex {
   display: flex;
   flex-direction: row;
@@ -70,7 +75,7 @@ main section {
 }
 
 #sec2 {
-  margin-bottom: 16rem;
+  margin-bottom: 2rem;
 }
 
 .planets {
@@ -98,15 +103,16 @@ main section {
   border-radius: 50%;
   z-index: -2;
   left: 16rem;
-  top: 4rem;
+  top: -2rem;
 }
 
 .transition {
+  margin-top: -10rem;
   margin-bottom: 0;
 }
 
 .transition section {
-  background-color: #111628;
+  /* background-color: #111628; */
 }
 
 .transition img {
@@ -115,12 +121,24 @@ main section {
 }
 
 #sec3 {
-  margin-top: -1rem;
-  padding-bottom: 12rem;
+  padding-top: 18rem;
   margin-bottom: 0;
+
+  padding-bottom: 12rem;
 
   margin-left: 0;
   margin-right: 0;
+
+  background-image: url(./../img/landscape1.svg);
+  background-size: 100vw;
+
+  min-height: 60rem;
+
+  background-repeat: no-repeat;
+}
+
+#sec3 canvas {
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
 }
 
 footer {
@@ -133,126 +151,4 @@ footer {
 
 /* Desktop */
 @media screen and (min-width: 64rem) {
-}
-
-/* Layout grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1.5rem;
-  /* margin: 0 0.75rem; */
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
-}
-
-.grid--inner {
-  margin: 0;
-}
-
-.width-1\/12 {
-  grid-column: 1 / 13;
-}
-
-.width-2\/12 {
-  grid-column: span 2;
-}
-
-.width-6\/12 {
-  grid-column: span 4;
-}
-
-/* // More of the same... */
-
-.width-12\/12 {
-  grid-column: span 12;
-}
-
-.width-4\/9 {
-  grid-column: 1 / 5;
-}
-
-.width-2\/4-small {
-  grid-column: 2 / 4;
-}
-
-.span-4 {
-  grid-column: span 4;
-}
-
-.width-3\/10 {
-  grid-column: span 4;
-}
-
-.width-5\/9 {
-  grid-column: span 4;
-}
-
-.width-7\/12 {
-  grid-column: span 4;
-}
-
-/* Tablet */
-@media screen and (min-width: 48rem) {
-  .grid {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  .width-4\/9 {
-    grid-column: 3 / 7;
-  }
-
-  .width-3\/10 {
-    grid-column: 1 / 9;
-  }
-
-  .width-7\/12 {
-    grid-column: 5 / 9;
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 64rem) {
-  .grid {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .width-2\/7 {
-    grid-column: 2 / 8;
-  }
-
-  .width-6\/12 {
-    grid-column: span 6;
-  }
-
-  .width-4\/9 {
-    grid-column: 3 / 10;
-  }
-
-  .width-5\/9 {
-    grid-column: 4 / 10;
-  }
-
-  .width-3\/5 {
-    grid-column: 2 / 6;
-  }
-
-  .width-3\/6 {
-    grid-column: 2 / 7;
-  }
-
-  .width-6\/11 {
-    grid-column: 6 / 12;
-  }
-
-  .width-7\/11 {
-    grid-column: 7 / 12;
-  }
-
-  .width-3\/10 {
-    grid-column: 3 / 11;
-  }
-
-  .width-7\/12 {
-    grid-column: 7 / 13;
-  }
 }
