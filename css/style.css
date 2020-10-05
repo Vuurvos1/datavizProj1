@@ -7,7 +7,8 @@
 }
 
 body {
-  background-color: #1d1135;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #1d1135 22%, #5867a8 65%);
 }
 
 header {
@@ -18,7 +19,7 @@ header {
 main {
   min-height: 100vh;
   /* max-width: 104rem; */
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   margin: 0 auto;
 }
 
@@ -83,7 +84,7 @@ main section {
   height: 24rem;
   border-radius: 50%;
 
-  top: -10rem;
+  top: -15rem;
   right: 12rem;
 
   z-index: -2;
@@ -95,8 +96,35 @@ main section {
   height: 18rem;
   position: absolute;
   border-radius: 50%;
+  z-index: -2;
   left: 16rem;
-  top: 20rem;
+  top: 4rem;
+}
+
+.transition {
+  margin-bottom: 0;
+}
+
+.transition section {
+  background-color: #111628;
+}
+
+.transition img {
+  width: 100vw;
+  margin-left: -1rem;
+}
+
+#sec3 {
+  margin-top: -1rem;
+  padding-bottom: 12rem;
+  margin-bottom: 0;
+
+  margin-left: 0;
+  margin-right: 0;
+}
+
+footer {
+  background-color: #111628;
 }
 
 /* Tablet */
