@@ -10,7 +10,14 @@ window.addEventListener('scroll', () => {
   }
 });
 
-const textCol = '#';
+const textCol = '#fff';
+
+const red = '#ff6358';
+const yellow = '#ffd246';
+const green = '#78d237';
+const blue = '#28b4c8';
+const darkBlue = '#2d73f5';
+const purple = '#aa46be';
 
 new Chart(document.querySelector('#pieChart1').getContext('2d'), {
   type: 'doughnut',
@@ -28,14 +35,7 @@ new Chart(document.querySelector('#pieChart1').getContext('2d'), {
       {
         label: '# of Votes',
         data: [48, 13, 12, 9, 6, 4],
-        backgroundColor: [
-          '#ff6358',
-          '#ffd246',
-          '#78d237',
-          '#28b4c8',
-          '#2d73f5',
-          '#aa46be',
-        ],
+        backgroundColor: [red, yellow, green, blue, darkBlue, purple],
       },
     ],
   },
@@ -44,18 +44,9 @@ new Chart(document.querySelector('#pieChart1').getContext('2d'), {
       display: true,
       position: 'right',
       labels: {
-        fontColor: 'rgb(255, 99, 132)',
+        fontColor: textCol,
       },
     },
-    // scales: {
-    //   yAxes: [
-    //     {
-    //       ticks: {
-    //         beginAtZero: true,
-    //       },
-    //     },
-    //   ],
-    // },
   },
 });
 
@@ -70,12 +61,12 @@ new Chart(document.querySelector('#barChart1').getContext('2d'), {
     datasets: [
       {
         label: 'Aantal studenten',
-        backgroundColor: '#ff6358',
+        backgroundColor: red,
         data: [70, 13, 9],
       },
       {
         label: 'Introvert',
-        backgroundColor: '#2d73f5',
+        backgroundColor: darkBlue,
         data: [32, 6, 5],
       },
     ],
@@ -83,7 +74,7 @@ new Chart(document.querySelector('#barChart1').getContext('2d'), {
   options: {
     legend: {
       labels: {
-        fontColor: '#FFF',
+        fontColor: textCol,
       },
     },
     scales: {
@@ -92,10 +83,11 @@ new Chart(document.querySelector('#barChart1').getContext('2d'), {
           scaleLabel: {
             display: true,
             labelString: 'Aantal studenten',
-            fontColor: '#FFF',
+            fontColor: textCol,
           },
           ticks: {
             beginAtZero: true,
+            fontColor: textCol,
           },
         },
       ],
@@ -104,45 +96,25 @@ new Chart(document.querySelector('#barChart1').getContext('2d'), {
           scaleLabel: {
             display: false,
             // labelString: 'Cijfer hoe kijk je naar de toekomst',
-            fontColor: '#FFF',
+            fontColor: textCol,
           },
           ticks: {
             beginAtZero: true,
+            fontColor: textCol,
           },
         },
       ],
     },
   },
-  // options: {
-  //   barValueSpacing: 20,
-  //   scales: {
-  //     yAxes: [
-  //       {
-  //         ticks: {
-  //           min: 0,
-  //         },
-  //       },
-  //     ],
-  //   },
-  // },
 });
 
 new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
   type: 'bubble',
   data: {
-    // labels: 'Africa',
-
-    // '#ff6358',
-    // '#ffd246',
-    // '#78d237',
-    // '#28b4c8',
-    // '#2d73f5',
-    // '#aa46be',
-
     datasets: [
       {
         label: ['Tech'],
-        backgroundColor: '#ff6358',
+        backgroundColor: red,
         data: [
           {
             x: 3,
@@ -196,7 +168,7 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
       },
       {
         label: ['Visual'],
-        backgroundColor: '#ffd246',
+        backgroundColor: yellow,
         data: [
           {
             x: 1,
@@ -268,7 +240,7 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
       },
       {
         label: ['Anders'],
-        backgroundColor: '#78d237',
+        backgroundColor: green,
         data: [
           {
             x: 3,
@@ -356,16 +328,22 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
     ],
   },
   options: {
-    title: {
-      display: true,
-      text: 'Predicted world population (millions) in 2050',
+    legend: {
+      labels: {
+        fontColor: fontColor,
+      },
     },
     scales: {
       yAxes: [
         {
           scaleLabel: {
             display: true,
-            labelString: 'Happiness',
+            labelString: 'Hoeveel wil je verdienen?',
+            fontColor: fontColor,
+          },
+          ticks: {
+            beginAtZero: true,
+            fontColor: fontColor,
           },
         },
       ],
@@ -373,93 +351,15 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
         {
           scaleLabel: {
             display: true,
-            labelString: 'GDP (PPP)',
+            labelString: 'Cijfer aan de toekomst (1-10)',
+            fontColor: fontColor,
+          },
+          ticks: {
+            beginAtZero: true,
+            fontColor: fontColor,
           },
         },
       ],
     },
   },
 });
-
-/*
-new Chart(document.getElementById('bubbleChart1'), {
-  type: 'bubble',
-  data: {
-    labels: 'Africa',
-    datasets: [
-      {
-        label: ['China'],
-        backgroundColor: 'rgba(255,221,50,0.2)',
-        borderColor: 'rgba(255,221,50,1)',
-        data: [
-          {
-            x: 21269017,
-            y: 5.245,
-            r: 15,
-          },
-        ],
-      },
-      {
-        label: ['Denmark'],
-        backgroundColor: 'rgba(60,186,159,0.2)',
-        borderColor: 'rgba(60,186,159,1)',
-        data: [
-          {
-            x: 258702,
-            y: 7.526,
-            r: 10,
-          },
-        ],
-      },
-      {
-        label: ['Germany'],
-        backgroundColor: 'rgba(0,0,0,0.2)',
-        borderColor: '#000',
-        data: [
-          {
-            x: 3979083,
-            y: 6.994,
-            r: 15,
-          },
-        ],
-      },
-      {
-        label: ['Japan'],
-        backgroundColor: 'rgba(193,46,12,0.2)',
-        borderColor: 'rgba(193,46,12,1)',
-        data: [
-          {
-            x: 4931877,
-            y: 5.921,
-            r: 15,
-          },
-        ],
-      },
-    ],
-  },
-  options: {
-    title: {
-      display: true,
-      text: 'Predicted world population (millions) in 2050',
-    },
-    scales: {
-      yAxes: [
-        {
-          scaleLabel: {
-            display: true,
-            labelString: 'Happiness',
-          },
-        },
-      ],
-      xAxes: [
-        {
-          scaleLabel: {
-            display: true,
-            labelString: 'GDP (PPP)',
-          },
-        },
-      ],
-    },
-  },
-});
-*/
