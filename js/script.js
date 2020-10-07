@@ -330,7 +330,7 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
   options: {
     legend: {
       labels: {
-        fontColor: fontColor,
+        fontColor: textCol,
       },
     },
     scales: {
@@ -339,11 +339,11 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
           scaleLabel: {
             display: true,
             labelString: 'Hoeveel wil je verdienen?',
-            fontColor: fontColor,
+            fontColor: textCol,
           },
           ticks: {
             beginAtZero: true,
-            fontColor: fontColor,
+            fontColor: textCol,
           },
         },
       ],
@@ -352,11 +352,11 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
           scaleLabel: {
             display: true,
             labelString: 'Cijfer aan de toekomst (1-10)',
-            fontColor: fontColor,
+            fontColor: textCol,
           },
           ticks: {
             beginAtZero: true,
-            fontColor: fontColor,
+            fontColor: textCol,
           },
         },
       ],
