@@ -11,6 +11,7 @@ window.addEventListener('scroll', () => {
 });
 
 const textCol = '#fff';
+const textSize = '14';
 
 const red = '#ff6358';
 const yellow = '#ffd246';
@@ -83,6 +84,7 @@ new Chart(document.querySelector('#barChart1').getContext('2d'), {
           scaleLabel: {
             display: true,
             labelString: 'Aantal studenten',
+            fontSize: textSize,
             fontColor: textCol,
           },
           ticks: {
@@ -119,50 +121,50 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
           {
             x: 3,
             y: 10000,
-            r: 1,
+            r: 3,
           },
           {
             x: 4,
             y: 3500,
-            r: 3,
+            r: 9,
           },
           {
             x: 6,
             y: 2750,
-            r: 6,
+            r: 18,
           },
           {
             x: 6,
             y: 25000,
-            r: 1,
+            r: 3,
           },
           {
             x: 7,
             y: 4000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 8,
             y: 3000,
-            r: 6,
+            r: 18,
           },
           {
             x: 8,
             y: 25000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 9,
             y: 4500,
-            r: 3,
+            r: 9,
           },
 
           {
             x: 10,
             y: 3000,
-            r: 1,
+            r: 3,
           },
         ],
       },
@@ -173,68 +175,68 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
           {
             x: 1,
             y: 100,
-            r: 1,
+            r: 3,
           },
           {
             x: 1,
             y: 3000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 3,
             y: 3500,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 6,
             y: 2200,
-            r: 1,
+            r: 3,
           },
           {
             x: 6,
             y: 5000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 7,
             y: 2750,
-            r: 4,
+            r: 12,
           },
           {
             x: 7,
             y: 10000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 8,
             y: 2750,
-            r: 4,
+            r: 12,
           },
           {
             x: 8,
             y: 10000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 9,
             y: 3500,
-            r: 3,
+            r: 9,
           },
 
           {
             x: 10,
             y: 3250,
-            r: 2,
+            r: 6,
           },
           {
             x: 10,
             y: 5000,
-            r: 1,
+            r: 3,
           },
         ],
       },
@@ -245,83 +247,83 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
           {
             x: 3,
             y: 3000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 4,
             y: 8000,
-            r: 1,
+            r: 3,
           },
           {
             x: 5,
             y: 2000,
-            r: 2,
+            r: 6,
           },
 
           {
             x: 6,
             y: 2500,
-            r: 1,
+            r: 3,
           },
           {
             x: 6,
             y: 4000,
-            r: 2,
+            r: 6,
           },
           {
             x: 6,
             y: 10000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 7,
             y: 2500,
-            r: 4,
+            r: 12,
           },
           {
             x: 7,
             y: 5000,
-            r: 3,
+            r: 9,
           },
           {
             x: 7,
             y: 17000,
-            r: 3,
+            r: 9,
           },
 
           {
             x: 8,
             y: 3750,
-            r: 2,
+            r: 6,
           },
           {
             x: 8,
             y: 5500,
-            r: 5,
+            r: 15,
           },
           {
             x: 8,
             y: 6000,
-            r: 1,
+            r: 3,
           },
 
           {
             x: 9,
             y: 3000,
-            r: 4,
+            r: 12,
           },
           {
             x: 9,
             y: 13500,
-            r: 4,
+            r: 12,
           },
 
           {
             x: 10,
             y: 15000,
-            r: 4,
+            r: 12,
           },
         ],
       },
@@ -340,6 +342,7 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
             display: true,
             labelString: 'Hoeveel wil je verdienen?',
             fontColor: textCol,
+            fontSize: textSize,
           },
           ticks: {
             beginAtZero: true,
@@ -353,6 +356,345 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
             display: true,
             labelString: 'Cijfer aan de toekomst (1-10)',
             fontColor: textCol,
+            fontSize: textSize,
+          },
+          ticks: {
+            beginAtZero: true,
+            fontColor: textCol,
+          },
+        },
+      ],
+    },
+  },
+});
+
+new Chart(document.querySelector('#chart4').getContext('2d'), {
+  type: 'bubble',
+  data: {
+    datasets: [
+      {
+        label: ['Introvert'],
+        backgroundColor: red,
+        data: [
+          {
+            x: 1,
+            y: 4,
+            r: 3,
+          },
+          {
+            x: 4,
+            y: 4,
+            r: 3,
+          },
+          {
+            x: 6,
+            y: 4,
+            r: 3,
+          },
+          {
+            x: 7,
+            y: 4,
+            r: 6,
+          },
+
+          {
+            x: 7,
+            y: 5,
+            r: 3,
+          },
+
+          {
+            x: 3,
+            y: 6,
+            r: 3,
+          },
+          {
+            x: 6,
+            y: 6,
+            r: 3,
+          },
+
+          {
+            x: 7,
+            y: 6,
+            r: 9,
+          },
+          {
+            x: 8,
+            y: 6,
+            r: 3,
+          },
+          {
+            x: 9,
+            y: 6,
+            r: 3,
+          },
+          {
+            x: 10,
+            y: 6,
+            r: 6,
+          },
+          // 7
+          {
+            x: 9,
+            y: 7,
+            r: 3,
+          },
+          {
+            x: 9,
+            y: 7,
+            r: 9,
+          },
+          {
+            x: 9,
+            y: 7,
+            r: 6,
+          },
+          // 8
+          {
+            x: 4,
+            y: 8,
+            r: 3,
+          },
+          {
+            x: 7,
+            y: 8,
+            r: 6,
+          },
+          {
+            x: 8,
+            y: 8,
+            r: 9,
+          },
+          // 9
+          {
+            x: 8,
+            y: 9,
+            r: 6,
+          },
+        ],
+      },
+      {
+        label: ['Extrovert'],
+        backgroundColor: yellow,
+        data: [
+          {
+            x: 10,
+            y: 5,
+            r: 3,
+          },
+          // 6
+          {
+            x: 7,
+            y: 6,
+            r: 3,
+          },
+          {
+            x: 10,
+            y: 6,
+            r: 3,
+          },
+          // 7
+          {
+            x: 7,
+            y: 7,
+            r: 12,
+          },
+          {
+            x: 9,
+            y: 7,
+            r: 6,
+          },
+          // 8
+          {
+            x: 7,
+            y: 8,
+            r: 6,
+          },
+          {
+            x: 7,
+            y: 8,
+            r: 12,
+          },
+          {
+            x: 8,
+            y: 8,
+            r: 15,
+          },
+          {
+            x: 8,
+            y: 8,
+            r: 3,
+          },
+          // 9
+          {
+            x: 8,
+            y: 9,
+            r: 3,
+          },
+          // 10
+          {
+            x: 10,
+            y: 10,
+            r: 3,
+          },
+          {
+            x: 10,
+            y: 10,
+            r: 3,
+          },
+        ],
+      },
+      {
+        label: ['Anders'],
+        backgroundColor: green,
+        data: [
+          {
+            x: 3,
+            y: 5,
+            r: 3,
+          },
+          {
+            x: 4,
+            y: 5,
+            r: 3,
+          },
+          //6
+          {
+            x: 1,
+            y: 6,
+            r: 6,
+          },
+          {
+            x: 3,
+            y: 6,
+            r: 3,
+          },
+          {
+            x: 4,
+            y: 6,
+            r: 3,
+          },
+          {
+            x: 5,
+            y: 6,
+            r: 3,
+          },
+          {
+            x: 6,
+            y: 6,
+            r: 12,
+          },
+          {
+            x: 8,
+            y: 6,
+            r: 3,
+          },
+          //7
+          {
+            x: 4,
+            y: 7,
+            r: 3,
+          },
+          {
+            x: 6,
+            y: 7,
+            r: 9,
+          },
+          {
+            x: 7,
+            y: 7,
+            r: 9,
+          },
+          {
+            x: 8,
+            y: 7,
+            r: 3,
+          },
+          {
+            x: 9,
+            y: 7,
+            r: 3,
+          },
+          {
+            x: 10,
+            y: 7,
+            r: 3,
+          },
+          // 8
+          {
+            x: 5,
+            y: 8,
+            r: 3,
+          },
+          {
+            x: 7,
+            y: 8,
+            r: 6,
+          },
+          {
+            x: 8,
+            y: 8,
+            r: 12,
+          },
+          {
+            x: 9,
+            y: 8,
+            r: 6,
+          },
+          {
+            x: 10,
+            y: 8,
+            r: 3,
+          },
+          // 9
+          {
+            x: 6,
+            y: 9,
+            r: 6,
+          },
+          {
+            x: 9,
+            y: 9,
+            r: 3,
+          },
+          {
+            x: 10,
+            y: 9,
+            r: 3,
+          },
+        ],
+      },
+    ],
+  },
+  options: {
+    legend: {
+      labels: {
+        fontColor: textCol,
+      },
+    },
+    scales: {
+      yAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'Wat voor cijfer geven de studenten hun gezondheid',
+            fontColor: textCol,
+            fontSize: textSize,
+          },
+          ticks: {
+            beginAtZero: true,
+            fontColor: textCol,
+          },
+        },
+      ],
+      xAxes: [
+        {
+          scaleLabel: {
+            display: true,
+            labelString: 'Wat voor cijfer geef je de toekomst? (1-10)',
+            fontColor: textCol,
+            fontSize: textSize,
           },
           ticks: {
             beginAtZero: true,

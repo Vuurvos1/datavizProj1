@@ -124,7 +124,7 @@ main section {
   padding-top: 18rem;
   margin-bottom: 0;
 
-  padding-bottom: 16rem;
+  padding-bottom: 20rem;
 
   margin-left: 0;
   margin-right: 0;
@@ -139,6 +139,12 @@ main section {
 
 #sec3 canvas {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+}
+
+#sec4 {
+  margin: 0;
+  background-color: #111628;
+  padding-bottom: 2rem;
 }
 
 footer {
