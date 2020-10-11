@@ -1,3 +1,5 @@
+AOS.init();
+
 // paralax code
 const paralaxArr = document.querySelectorAll('.paralax');
 
@@ -24,12 +26,12 @@ new Chart(document.querySelector('#pieChart1').getContext('2d'), {
   type: 'doughnut',
   data: {
     labels: [
-      'Ja',
-      'Nee',
-      'Ja, bacteriën',
-      'Geen idee',
-      'Ja, earth like',
-      'Ja, like the movies',
+      'Yes!',
+      'No life out there',
+      'Yes, bacteria',
+      'No clue',
+      'Yes, earth like',
+      'Yes, Aliens like the movies',
     ],
 
     datasets: [
@@ -82,7 +84,7 @@ new Chart(document.querySelector('#barChart1').getContext('2d'), {
       yAxes: [
         {
           scaleLabel: {
-            display: true,
+            display: false,
             labelString: 'Aantal studenten',
             fontSize: textSize,
             fontColor: textCol,

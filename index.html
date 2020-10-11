@@ -3,20 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <title>Dataviz, de toekomst</title>
-    <link rel="stylesheet" href="css/style.css" />
+
     <link rel="stylesheet" href="css/grid.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   </head>
   <body>
-    <header class="grid">
-      <h1 class="title width-3/7">
-        Hoe zien data vizualizatie studenten de toekomst
-      </h1>
-    </header>
+    <header></header>
 
     <main>
-      <section id="sec1" class="grid">
+      <section id="intro" class="grid">
+        <div class="width-3/8">
+          <h1 class="title">How do CMD students see the future?</h1>
+          <p>
+            Scroll down
+            <svg
+              class="arrow--white arrow--down"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+              />
+            </svg>
+          </p>
+        </div>
+      </section>
+
+      <section id="space">
+        <h2 id="abc">
+          First something far away: <br />
+          Life in space
+        </h2>
+
+        <div class="grid spaceGraph1">
+          <div class="width-3/5">
+            <p data-aos="fade" data-aos-duration="650" class="graph1-info">
+              Hoi, this is some info
+            </p>
+          </div>
+
+          <div class="graphContainer1 width-6/11">
+            <div class="graph1">
+              <h3>Hoeveel studenten geloven in buitenaards leven?</h3>
+              <canvas
+                data-aos="fade-left"
+                data-aos-duration="650"
+                data-aos-offset="-100"
+                data-aos-easing="ease-out"
+                class="canvas"
+                id="pieChart1"
+              >
+              </canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="650"
+            data-aos-easing="ease-out"
+            class="graphContainer2 width-5/9"
+          >
+            <h3>Intorvert deel van buitenaards leven</h3>
+
+            <div
+              data-aos="fade-up"
+              data-aos-duration="650"
+              data-aos-easing="ease-out"
+              class="graphContainer2inner"
+            >
+              <p class="labelY">
+                Aantal studenten
+                <svg
+                  class="arrow--white arrow--right"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z"
+                  />
+                </svg>
+              </p>
+
+              <canvas class="canvas" id="barChart1"></canvas>
+            </div>
+          </div>
+          <div class="width-2/12 graph2-info-container">
+            <p class="graph2-info">some info about this graphs</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="downToEarth">
+        <h2>Now something more down to Earth</h2>
+
+        <div class="hillBG"></div>
+        <div class="bgGradient"></div>
+        <div class="bgBase"></div>
+
+        <section id="sec3" class="grid">
+          <!-- <div></div> -->
+          <div class="width-6/10 dropShadow">
+            <h3>
+              Hoe gelukkig zijn studenten in vergelijking met hoeveel ze willen
+              verdienen?
+            </h3>
+            <canvas class="canvas" id="bubbleChart1" height="220"></canvas>
+          </div>
+        </section>
+      </section>
+
+      <!-- <section id="sec1" class="grid">
         <div class="austronautContainer width-3/5">
           <img
             data-paralaxspeed="0.2"
@@ -26,12 +144,17 @@
           />
         </div>
         <div class="width-6/11">
-          <h3>Hoeveel studenten geloven in buitenaarts leven?</h3>
-          <canvas class="canvas" id="pieChart1" height="180"></canvas>
+          <h3>Hoeveel studenten geloven in buitenaards leven?</h3>
+          <canvas
+            data-aos="fade-left"
+            class="canvas"
+            id="pieChart1"
+            height="180"
+          ></canvas>
         </div>
-      </section>
+      </section> -->
 
-      <section id="sec2" class="">
+      <!-- <section id="sec2" class="">
         <div class="grid grid--inner">
           <div class="width-5/9">
             <h3>Intorvert deel van buitenaars leven</h3>
@@ -42,10 +165,10 @@
           <div data-paralaxspeed="0.16" class="paralax planet1"></div>
           <div data-paralaxspeed="0.25" class="paralax planet2"></div>
         </div>
-      </section>
+      </section> -->
 
       <section class="transition">
-        <section id="sec3" class="grid">
+        <!-- <section id="sec3" class="grid">
           <div></div>
           <div class="width-6/10">
             <h3>
@@ -54,11 +177,11 @@
             </h3>
             <canvas class="canvas" id="bubbleChart1" height="220"></canvas>
           </div>
-        </section>
+        </section> -->
 
         <section id="sec4" class="grid">
           <div></div>
-          <div class="width-5/9">
+          <div class="width-5/9 dropShadow">
             <h3>
               Hoe kijken de studenten naar de toekomst en hoe gezond voelen zij
               zich?
@@ -71,6 +194,7 @@
 
     <footer></footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

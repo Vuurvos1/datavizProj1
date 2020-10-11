@@ -87,6 +87,10 @@
     grid-column: 3 / 8;
   }
 
+  .width-3\/8 {
+    grid-column: 3 / 9;
+  }
+
   .width-6\/12 {
     grid-column: span 6;
   }
