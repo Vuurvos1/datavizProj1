@@ -57,13 +57,13 @@ new Chart(document.querySelector('#barChart1').getContext('2d'), {
   type: 'bar',
   data: {
     labels: [
-      'Geloofd buitenaards leven',
-      'Geen buitenaards leven',
-      'Geen idee',
+      'Yes alien life',
+      'No alien life',
+      'No clue',
     ],
     datasets: [
       {
-        label: 'Aantal studenten',
+        label: 'Amount of Students',
         backgroundColor: red,
         data: [70, 13, 9],
       },
@@ -85,7 +85,7 @@ new Chart(document.querySelector('#barChart1').getContext('2d'), {
         {
           scaleLabel: {
             display: false,
-            labelString: 'Aantal studenten',
+            labelString: 'Amount of Students',
             fontSize: textSize,
             fontColor: textCol,
           },
@@ -243,7 +243,7 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
         ],
       },
       {
-        label: ['Anders'],
+        label: ['Other'],
         backgroundColor: green,
         data: [
           {
@@ -342,7 +342,7 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
         {
           scaleLabel: {
             display: true,
-            labelString: 'Hoeveel wil je verdienen?',
+            labelString: 'How much do you want to earn a month?',
             fontColor: textCol,
             fontSize: textSize,
           },
@@ -356,7 +356,7 @@ new Chart(document.querySelector('#bubbleChart1').getContext('2d'), {
         {
           scaleLabel: {
             display: true,
-            labelString: 'Cijfer aan de toekomst (1-10)',
+            labelString: 'Grade for the Futre (1-10)',
             fontColor: textCol,
             fontSize: textSize,
           },
@@ -548,7 +548,7 @@ new Chart(document.querySelector('#chart4').getContext('2d'), {
         ],
       },
       {
-        label: ['Anders'],
+        label: ['Other'],
         backgroundColor: green,
         data: [
           {
@@ -680,7 +680,7 @@ new Chart(document.querySelector('#chart4').getContext('2d'), {
         {
           scaleLabel: {
             display: true,
-            labelString: 'Wat voor cijfer geven de studenten hun gezondheid',
+            labelString: 'What grade do the students give their health',
             fontColor: textCol,
             fontSize: textSize,
           },
@@ -694,7 +694,7 @@ new Chart(document.querySelector('#chart4').getContext('2d'), {
         {
           scaleLabel: {
             display: true,
-            labelString: 'Wat voor cijfer geef je de toekomst? (1-10)',
+            labelString: 'What grade do you give the future? (1-10)',
             fontColor: textCol,
             fontSize: textSize,
           },
@@ -707,3 +707,135 @@ new Chart(document.querySelector('#chart4').getContext('2d'), {
     },
   },
 });
+
+const dataX = [
+  {
+    type: 'sunburst',
+    ids: [
+      'Yes alien life',
+      'No alien life',
+      'No clue',
+
+      'Yes alien life - Electronic',
+      'Yes alien life - None',
+      'Yes alien life - Hip Hop',
+      'Yes alien life - Metal',
+      'Yes alien life - Other',
+      'Yes alien life - Pop',
+      'Yes alien life - R&B',
+      'Yes alien life - Rap',
+      'Yes alien life - Rock',
+
+      'No Alien life - None',
+      'No Alien life - Hip hop',
+      'No Alien life - Metal',
+      'No Alien life - Other',
+      'No Alien life - Pop',
+      'No Alien life - Rap',
+      'No Alien life - Rock',
+
+      'No clue - None' ,
+      'No clue - Hip Hop' ,
+      'No clue - Metal' ,
+      'No clue - Other' ,
+      'No clue - Pop' ,
+      'No clue - R&B' ,
+    ],
+    labels: [
+      'Yes alien life',
+      'No alien life',
+      'No clue',
+
+      'Electronic',
+      'None',
+      'Hip Hop',
+      'Metal',
+      'Other',
+      'Pop',
+      'R&B',
+      'Rap',
+      'Rock',
+
+      'None',
+      'Hip Hop',
+      'Metal',
+      'Other',
+      'Pop',
+      'Rap',
+      'Rock',
+
+      'None',
+      'Hip Hop',
+      'Metal',
+      'Other',
+      'Rock',
+      'Pop',
+      'R&B',
+    ],
+    parents: [
+      '',
+      '',
+      '',
+      'Yes alien life',
+      'Yes alien life',
+      'Yes alien life',
+      'Yes alien life',
+      'Yes alien life',
+      'Yes alien life',
+      'Yes alien life',
+      'Yes alien life',
+      'Yes alien life',
+
+      'No alien life',
+      'No alien life',
+      'No alien life',
+      'No alien life',
+      'No alien life',
+      'No alien life',
+      'No alien life',
+
+      'No clue',
+      'No clue',
+      'No clue',
+      'No clue',
+      'No clue',
+      'No clue',
+    ],
+    values:  [
+              0, 0, 0, 
+              22, 5, 11, 10 ,6, 8, 6, 2, 6,
+              1, 2, 1, 3, 4, 1, 1, 2,
+              1, 1, 1, 2, 2, 1, 1
+            ],
+
+    outsidetextfont: { size: 20, color: '#377eb8' },
+    // leaf: {opacity: 0.4},
+    marker: { line: { width: 2 } },
+  },
+];
+
+// var data = [{
+//   type: "sunburst",
+//   labels: ["Eve", "Cain", "Seth", "Enos", "Noam", "Abel", "Awan", "Enoch", "Azura"],
+//   parents: ["", "Eve", "Eve", "Seth", "Seth", "Eve", "Eve", "Awan", "Eve" ],
+//   values:  [10, 14, 12, 10, 2, 6, 6, 4, 4],
+//   outsidetextfont: {size: 20, color: "#377eb8"},
+//   leaf: {opacity: 0.4},
+//   marker: {line: {width: 2}},
+// }];
+
+// var layout = {
+//   margin: {l: 0, r: 0, b: 0, t: 0},
+//   width: 500,
+//   height: 500
+// };
+
+
+const layout = {
+  margin: { l: 0, r: 0, b: 0, t: 0 },
+  plot_bgcolor: 'black',
+  paper_bgcolor: '#111628',
+  sunburstcolorway: ['#636efa', '#ef553b', '#00cc96'],
+};
+
+Plotly.newPlot('sunburst1', dataX, layout);

@@ -141,7 +141,6 @@ h2 {
 .graph1-info {
   padding: 0.8em;
   background-color: var(--white);
-  /* margin-top: 20rem; */
   margin-top: 100%;
 }
 
@@ -238,7 +237,8 @@ h3 {
 
 #downToEarth {
   position: relative;
-  min-height: 100vh;
+  /* padding-top: 2rem; */
+  min-height: 98rem;
 }
 
 #downToEarth h2 {
@@ -264,9 +264,17 @@ h3 {
   box-shadow: var(--dropShadowSubtile);
 }
 
-/*
-#sec1 {
-  margin-bottom: 10rem;
+.modebar {
+  display: none;
+}
+
+#sec4 {
+  padding-top: 1.2rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #111628;
 }
 
 /* .canvas {
@@ -275,10 +283,6 @@ h3 {
 } */
 
 /*
-main section {
-  margin-bottom: 3.2rem;
-}
-
 .austronautContainer {
   position: relative;
 }
@@ -291,10 +295,6 @@ main section {
 
   width: 14rem;
   height: 14rem;
-}
-
-#sec2 {
-  margin-bottom: 2rem;
 }
 
 .planets {
@@ -325,42 +325,14 @@ main section {
   top: -4rem;
 }
 
-
-.transition img {
-  width: 100vw;
-  margin-left: -1rem;
-}
-
-#sec3 {
-  padding-top: 18rem;
-  margin-bottom: 0;
-
-  padding-bottom: 20rem;
-
-  margin-left: 0;
-  margin-right: 0;
-
-  background-image: url(./../img/landscape1.svg);
-  background-size: 100vw;
-
-  min-height: 60rem;
-
-  background-repeat: no-repeat;
-}
-
 #sec3 canvas {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
 /* }
-
-#sec4 {
-  margin: 0;
-  background-color: #111628;
-  padding-bottom: 2rem;
-}
+*/
 
 footer {
   background-color: #111628;
-} */
+}
 
 /* Tablet */
 @media screen and (min-width: 48rem) {
