@@ -836,6 +836,8 @@ const layout = {
   plot_bgcolor: 'black',
   paper_bgcolor: '#111628',
   sunburstcolorway: ['#636efa', '#ef553b', '#00cc96'],
+  width: 800,
+  height: 400
 };
 
 Plotly.newPlot('sunburst1', dataX, layout);
